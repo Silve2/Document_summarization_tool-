@@ -10,11 +10,11 @@ This version of gpt is cheap ( Input- $0.50 / 1M tokens Output- $1.50 / 1M token
 - API Configuration <br>
 api_key: A variable that needs to be replaced with a valid OpenAI API key to use the AI model from OpenAI.
 ## Functions ##
-- save_uploaded_file(uploaded_file):
+- <i>save_uploaded_file(uploaded_file)</i>:
 Saves the file uploaded by the user in a uploaded_files folder. Handles exceptions during the file saving and returns the saved file path or an error message.
-- extract_text_from_pdf(pdf_path):
+- <i>extract_text_from_pdf(pdf_path)</i>:
 Extracts text from a PDF file using pdfplumber. Iterates through each page of the PDF and concatenates the text into a single string.
-- summarize_text(file_path):
+- <i>summarize_text(file_path)</i>:
 Sends a request to the OpenAI model, specifying the text extracted from a PDF to generate a summary and a title. The request includes headers for authentication and data formatted in JSON. Parses the response to extract the summary and the title.
 ```
 rl = "https://api.openai.com/v1/chat/completions"
@@ -34,7 +34,7 @@ rl = "https://api.openai.com/v1/chat/completions"
 ```
 The content of the question is written in italian and also the response.
 The text inside the document can be in an other language.
-- write_text(summary, title, jsonResp):
+- <i>write_text(summary, title, jsonResp)</i>:
 Displays the title and summary in two separate columns in the Streamlit user interface. Also shows the complete JSON response in a formatted code block.
 
 ## User Experience ##
